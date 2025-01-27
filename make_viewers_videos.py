@@ -4,7 +4,7 @@ import shutil
 STEREO_JS_SOURCE='example/stereo.js'
 STEREO_JS_SOURCE_AR2 = 'example_ar_2_195/stereo.js'
 SAVE_PATH = 'viewers'
-PAIRS_USER_STUDY_PATH = "https://eyetoeye-anonym.github.io/pairs-SM-full-blended-reflective-benchmark/pairs-user-study-webm"  # https path used inside <source>
+PAIRS_USER_STUDY_PATH = "https://eyetoeye-anonym.github.io/pairs-SM-full-blended-reflective-benchmark"  # https path used inside <source>
 VIDEOS_LOCAL_PATH = '../VR-viewer-files/pairs-SM-full-blended-reflective-benchmark/'
 
 
