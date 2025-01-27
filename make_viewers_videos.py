@@ -62,25 +62,25 @@ def main():
         if VIEWER_TYPE == 'seperate':
         # Create subfolders for each result type
             ours_folder = os.path.join(SAVE_PATH, f"{prompt}_ours")
-            warp_inpaint_folder = os.path.join(SAVE_PATH, f"{prompt}_warp_inpaint")
+            # warp_inpaint_folder = os.path.join(SAVE_PATH, f"{prompt}_warp_inpaint")
             
             os.makedirs(ours_folder, exist_ok=True)
-            os.makedirs(warp_inpaint_folder, exist_ok=True)
+            # os.makedirs(warp_inpaint_folder, exist_ok=True)
             
             # Generate the HTML for each result
             ours_html = create_html(prompt, "ours")
-            warp_inpaint_html = create_html(prompt, "warp_inpaint")
+            # warp_inpaint_html = create_html(prompt, "warp_inpaint")
             
             # Write index.html into each subfolder
             with open(os.path.join(ours_folder, "index.html"), "w", encoding="utf-8") as f:
                 f.write(ours_html)
             
-            with open(os.path.join(warp_inpaint_folder, "index.html"), "w", encoding="utf-8") as f:
-                f.write(warp_inpaint_html)
+            # with open(os.path.join(warp_inpaint_folder, "index.html"), "w", encoding="utf-8") as f:
+            #     f.write(warp_inpaint_html)
             
             # Copy stereo.js to each subfolder
             shutil.copy2(STEREO_JS_SOURCE, ours_folder)
-            shutil.copy2(STEREO_JS_SOURCE, warp_inpaint_folder)
+            # shutil.copy2(STEREO_JS_SOURCE, warp_inpaint_folder)
             print(f"Created HTML for prompt: {prompt}")
         
         else:
