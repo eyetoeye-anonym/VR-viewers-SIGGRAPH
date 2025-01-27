@@ -4,7 +4,7 @@ import shutil
 STEREO_JS_SOURCE='example/stereo.js'
 STEREO_JS_SOURCE_AR2 = 'example_ar_2_195/stereo.js'
 SAVE_PATH = 'viewers'
-PAIRS_USER_STUDY_PATH = "https://github.com/eyetoeye-anonym/VR-viewer-files/pairs-SM-full-blended-reflective-benchmark"  # https path used inside <source>
+PAIRS_USER_STUDY_PATH = "https://eyetoeye-anonym.github.io/VR-viewer-files/pairs-SM-full-blended-reflective-benchmark"  # https path used inside <source>
 VIDEOS_LOCAL_PATH = '../VR-viewer-files/pairs-SM-full-blended-reflective-benchmark/'
 
 
@@ -52,7 +52,7 @@ def create_html(prompt_name: str, result: str) -> str:
     )
 
 def main():
-    VIEWER_TYPE = 'spatial_compare' # | 'temporal_compare' | 'spatial_compare' | 'seperate'
+    VIEWER_TYPE = 'seperate' # | 'temporal_compare' | 'spatial_compare' | 'seperate'
     assert VIEWER_TYPE in ['seperate', 'temporal_compare', 'spatial_compare'], "Invalid viewer type"
     # Go through each item in the video folder
     for prompt in os.listdir(VIDEOS_LOCAL_PATH):
